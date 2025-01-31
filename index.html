@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hercegnők Világa</title>
+    <style>
+        body {
+            background-color: #f8c9d3;
+            font-family: Arial, sans-serif;
+            color: #5d3f4b;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #d3a24e;
+        }
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background: url('hercegno.jpeg') no-repeat center center/cover;
+            border: 5px solid #d3a24e;
+            border-radius: 15px;
+        }
+        button {
+            background-color: #d3a24e;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b28a3e;
+        }
+        .info, .jokes {
+            display: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .info p, .jokes p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hercegnők Világa</h1>
+    
+    <div class="container">
+        <h2>Fedezd fel a hercegnők titkait!</h2>
+        
+        <button onclick="toggleInfo()">Tudd meg az érdekességeket a hercegnőkről</button>
+        <button onclick="toggleJokes()">Kacagj egy kicsit! Viccek hercegnőkről</button>
+        
+        <div class="info">
+            <p>1. A mesebeli hercegnők gyakran a bátorságot és a jóságot szimbolizálják.</p>
+            <p>2. A hercegnők gyakran varázslatos világban élnek, ahol minden lehetséges!</p>
+            <p>3. Sok hercegnő szoros kapcsolatban áll a természet elemeivel, mint a víz, a tűz, a föld és a levegő.</p>
+        </div>
+        
+        <div class="jokes">
+            <p>Miért nem szeretik a hercegnők a számháborút? Mert mindig kijönnek a matematikai problémákból!</p>
+            <p>Miért nem lehet a hercegnőknek titkai? Mert a várak mindig kémkednek!</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            const infoDiv = document.querySelector('.info');
+            const jokesDiv = document.querySelector('.jokes');
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+                jokesDiv.style.display = "none";
+            } else {
+                infoDiv.style.display = "none";
+            }
+        }
+
+        function toggleJokes() {
+            const jokesDiv = document.querySelector('.jokes');
+            const infoDiv = document.querySelector('.info');
+            if (jokesDiv.style.display === "none" || jokesDiv.style.display === "") {
+                jokesDiv.style.display = "block";
+                infoDiv.style.display = "none";
+            } else {
+                jokesDiv.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
